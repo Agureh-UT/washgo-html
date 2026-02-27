@@ -83,130 +83,36 @@
 
 <!-- ─── Hero ─── -->
 <!-- ─── Hero ─── -->
-<main>
-<section class="hero" aria-labelledby="hero-title">
-  <div class="hero__bg">
-    <div class="hero__gradient hero__gradient--1"></div>
-    <div class="hero__gradient hero__gradient--2"></div>
-    <!-- Subtle grid overlay -->
-    <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(26,143,227,0.04) 1px, transparent 1px),linear-gradient(90deg, rgba(26,143,227,0.04) 1px, transparent 1px);background-size:60px 60px;"></div>
+<!-- HERO GRID -->
+<section class="hero-grid">
+
+  <div class="left-video">
+    <video autoplay muted loop playsinline>
+      <source src="public/Assets/detail.mp4" type="video/mp4">
+    </video>
   </div>
 
-  <div class="hero__content">
-    <div class="hero__eyebrow" aria-label="Service area">
-      📍 We Come To You — Anywhere
+  <div class="right-grid">
+    <div class="top-video">
+      <video autoplay muted loop playsinline>
+        <source src="public/Assets/vedio3.mp4" type="video/mp4">
+      </video>
     </div>
-    <h1 class="hero__title" id="hero-title">
-      Premium Care<br/>
-      <span class="gradient-text">Delivered To<br/>Your Door</span>
-    </h1>
-    <p class="hero__description">
-      Professional mobile car detailing and house cleaning services.
-      No queues, no waiting — we come to your home, office, or wherever you are.
-    </p>
-    <div class="hero__actions">
-      <a href="booking.html" class="btn btn--accent btn--lg">Book Now</a>
-      <a href="#" class="btn btn--ghost btn--lg" data-whatsapp="Hi! I'd like to enquire about Wash&Go services">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.09.539 4.09 1.482 5.832L0 24l6.344-1.449A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.846 0-3.594-.476-5.12-1.31l-.366-.216-3.766.861.913-3.655-.241-.378A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-        Chat With Us
-      </a>
-    </div>
-    <div class="hero__stats" role="list">
-      <div role="listitem">
-        <div class="hero__stat-value" data-count="500" data-suffix="+" aria-label="500+ Happy Clients">0+</div>
-        <div class="hero__stat-label">Happy Clients</div>
-      </div>
-      <div role="listitem">
-        <div class="hero__stat-value" data-count="4.9" data-suffix="★" aria-label="4.9 Star Rating">0★</div>
-        <div class="hero__stat-label">Average Rating</div>
-      </div>
-      <div role="listitem">
-        <div class="hero__stat-value" data-count="3" data-suffix="yr" aria-label="3 Years Experience">0yr</div>
-        <div class="hero__stat-label">Experience</div>
-      </div>
+    <div class="bottom-images">
+      <img src="public/Assets/car2.jpg" alt="Car 1">
     </div>
   </div>
 
-  <div class="hero__visual" aria-hidden="true">
-    <div class="hero__img-wrap">
-      <div class="hero__img-glow"></div>
-      <!-- Car illustration SVG -->
-      <svg viewBox="0 0 480 380" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <radialGradient id="carGlow" cx="50%" cy="70%" r="50%">
-            <stop offset="0%" stop-color="#1a8fe3" stop-opacity=".5"/>
-            <stop offset="100%" stop-color="#1a8fe3" stop-opacity="0"/>
-          </radialGradient>
-          <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#1e3a5f"/>
-            <stop offset="100%" stop-color="#0a1e35"/>
-          </linearGradient>
-          <linearGradient id="glassGrad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#4fb3f7" stop-opacity=".7"/>
-            <stop offset="100%" stop-color="#1a8fe3" stop-opacity=".3"/>
-          </linearGradient>
-        </defs>
-        <!-- Ground glow -->
-        <ellipse cx="240" cy="320" rx="180" ry="30" fill="url(#carGlow)"/>
-        <!-- Car body lower -->
-        <rect x="60" y="230" width="360" height="80" rx="18" fill="url(#bodyGrad)" stroke="#1a8fe3" stroke-width="1.5"/>
-        <!-- Car body upper (cabin) -->
-        <path d="M120 230 C130 170 180 150 240 148 C300 148 350 170 360 230 Z" fill="#0d2545" stroke="#1a8fe3" stroke-width="1.5"/>
-        <!-- Windshield -->
-        <path d="M145 228 C155 185 190 164 240 162 C290 164 325 185 335 228 Z" fill="url(#glassGrad)" opacity=".9"/>
-        <!-- Side window -->
-        <path d="M120 220 C122 195 135 178 148 174 L145 228 Z" fill="url(#glassGrad)" opacity=".5"/>
-        <path d="M360 220 C358 195 345 178 332 174 L335 228 Z" fill="url(#glassGrad)" opacity=".5"/>
-        <!-- Door lines -->
-        <line x1="240" y1="230" x2="240" y2="308" stroke="#1a8fe3" stroke-width="1" opacity=".4"/>
-        <line x1="160" y1="230" x2="160" y2="308" stroke="#1a8fe3" stroke-width="1" opacity=".4"/>
-        <line x1="320" y1="230" x2="320" y2="308" stroke="#1a8fe3" stroke-width="1" opacity=".4"/>
-        <!-- Door handles -->
-        <rect x="185" y="270" width="30" height="6" rx="3" fill="#4fb3f7" opacity=".6"/>
-        <rect x="265" y="270" width="30" height="6" rx="3" fill="#4fb3f7" opacity=".6"/>
-        <!-- Wheels -->
-        <circle cx="140" cy="310" r="42" fill="#0a1525" stroke="#1a8fe3" stroke-width="2.5"/>
-        <circle cx="140" cy="310" r="28" fill="#0d2040" stroke="#4fb3f7" stroke-width="1.5"/>
-        <circle cx="140" cy="310" r="12" fill="#1a8fe3" opacity=".8"/>
-        <!-- Wheel spokes -->
-        <line x1="140" y1="282" x2="140" y2="338" stroke="#4fb3f7" stroke-width="2" opacity=".5"/>
-        <line x1="112" y1="310" x2="168" y2="310" stroke="#4fb3f7" stroke-width="2" opacity=".5"/>
-        <line x1="120" y1="290" x2="160" y2="330" stroke="#4fb3f7" stroke-width="2" opacity=".5"/>
-        <line x1="160" y1="290" x2="120" y2="330" stroke="#4fb3f7" stroke-width="2" opacity=".5"/>
-
-        <circle cx="340" cy="310" r="42" fill="#0a1525" stroke="#1a8fe3" stroke-width="2.5"/>
-        <circle cx="340" cy="310" r="28" fill="#0d2040" stroke="#4fb3f7" stroke-width="1.5"/>
-        <circle cx="340" cy="310" r="12" fill="#1a8fe3" opacity=".8"/>
-        <line x1="340" y1="282" x2="340" y2="338" stroke="#4fb3f7" stroke-width="2" opacity=".5"/>
-        <line x1="312" y1="310" x2="368" y2="310" stroke="#4fb3f7" stroke-width="2" opacity=".5"/>
-        <line x1="320" y1="290" x2="360" y2="330" stroke="#4fb3f7" stroke-width="2" opacity=".5"/>
-        <line x1="360" y1="290" x2="320" y2="330" stroke="#4fb3f7" stroke-width="2" opacity=".5"/>
-        <!-- Headlights -->
-        <rect x="62" y="248" width="40" height="16" rx="6" fill="#00d4ff" opacity=".8"/>
-        <rect x="62" y="248" width="40" height="16" rx="6" fill="#00d4ff" filter="blur(6px)" opacity=".5"/>
-        <!-- Taillights -->
-        <rect x="378" y="248" width="40" height="16" rx="6" fill="#1a8fe3" opacity=".9"/>
-        <!-- Shine streaks on body -->
-        <path d="M160 200 Q240 190 320 200" stroke="white" stroke-width="1" opacity=".12"/>
-        <path d="M140 215 Q240 205 340 215" stroke="white" stroke-width=".5" opacity=".08"/>
-        <!-- Water drops / wash effect -->
-        <circle cx="200" cy="170" r="4" fill="#00d4ff" opacity=".6"/>
-        <circle cx="280" cy="155" r="3" fill="#00d4ff" opacity=".5"/>
-        <circle cx="240" cy="140" r="5" fill="#4fb3f7" opacity=".4"/>
-        <path d="M200 174 L196 185" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" opacity=".4"/>
-        <path d="M280 158 L277 168" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" opacity=".4"/>
-        <path d="M240 145 L236 160" stroke="#4fb3f7" stroke-width="1.5" stroke-linecap="round" opacity=".35"/>
-        <!-- Wash spray arc -->
-        <path d="M400 100 Q440 140 420 200" stroke="#00d4ff" stroke-width="2" stroke-linecap="round" opacity=".3" stroke-dasharray="6 6"/>
-        <circle cx="405" cy="95" r="5" fill="#00d4ff" opacity=".5"/>
-        <text x="390" y="80" fill="#4fb3f7" font-size="18" opacity=".7" font-family="sans-serif">💧</text>
-      </svg>
-    </div>
+  <div class="hero-content">
+    <h1>The Detailing Mafia</h1>
+    <p>Perfection is in the detail</p>
+    <a href="#" class="btn btn--primary btn--sm"><span>Explore Services</span></a>
   </div>
+
 </section>
 
 <!-- ─── Trust Bar ─── -->
-<section class="section--sm" style="background:var(--clr-bg-2);border-top:1px solid var(--clr-border);border-bottom:1px solid var(--clr-border)">
+<!-- <section class="section--sm" style="background:var(--clr-bg-2);border-top:1px solid var(--clr-border);border-bottom:1px solid var(--clr-border)">
   <div class="container">
     <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:var(--space-10)">
       <div style="display:flex;align-items:center;gap:var(--space-3);color:var(--clr-text-muted);font-size:var(--fs-sm)">
@@ -226,7 +132,40 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
+
+
+<div class="header">
+    <h1>Select your vehicle type</h1>
+
+    <!-- Vehicle Buttons -->
+    <div class="vehicle-types">
+        <button class="active" data-vehicle="sedan">Sedan</button>
+        <button data-vehicle="suv">SUV</button>
+        <button data-vehicle="pickup">Pick Up</button>
+        <button data-vehicle="van">Mini Van</button>
+    </div>
+
+    <!-- Image Section -->
+    <div class="image-wrapper">
+        <img id="carImage" src="public/Assets/sedan.png" alt="Vehicle Image">
+  
+         <a href="booking.html" class="image-book-btn">Book Now</a>
+    </div>
+
+    <!-- Navigation Buttons -->
+
+    <div class="nav-buttons">
+        <button id="prevCarBtn">⬅ Previous</button>
+        <button id="nextCarBtn">Next ➡</button>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="packageModal" class="modal">
+    <div class="modal-content" id="modalContent"></div>
+</div>
+
 
 <!-- ─── Services ─── -->
 <section class="section" id="services" aria-labelledby="services-title">
