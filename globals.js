@@ -896,3 +896,88 @@ if (typeof module !== 'undefined' && module.exports) {
     WHATSAPP_NUMBER, BUSINESS_EMAIL, BUSINESS_PHONE
   };
 }
+
+//# select vehicle type script 
+
+(function () {
+
+  function initVehicleScripts() {
+
+    const vehicleKeys = ["sedan", "suv", "pickup", "van"];
+    let currentIndex = 0;
+
+    const vehicles = {
+      sedan: { image: "public/Assets/sedan.png", title: "Sedan Detailing", price: "KES 5,500" },
+      suv: { image: "public/Assets/suv.png", title: "SUV Detailing", price: "KES 10,500" },
+      pickup: { image: "public/Assets/pickup.png", title: "Pickup Detailing", price: "KES 12,000" },
+      van: { image: "public/Assets/van.png", title: "Mini Van Detailing", price: "KES 14,000" }
+    };
+
+    const img = document.getElementById("carImage");
+    const modal = document.getElementById("packageModal");
+    const content = document.getElementById("modalContent");
+
+   
+    if (!img || !modal || !content) return;
+
+    vehicleKeys.forEach(key => {
+      const preloaded = new Image();
+      preloaded.src = vehicles[key].image;
+    });
+
+    function updateImage(type) {
+      img.classList.add("fade");
+
+      setTimeout(() => {
+        img.src = vehicles[type].image;
+        img.classList.remove("fade");
+      }, 200);
+    }
+
+    function selectVehicle(type, buttonElement = null) {
+      currentIndex = vehicleKeys.indexOf(type);
+      updateImage(type);
+
+      document.querySelectorAll(".vehicle-types button")
+        .forEach(btn => btn.classList.remove("active"));
+
+      if (buttonElement) buttonElement.classList.add("active");
+    }
+
+    function nextCar() {
+      currentIndex = (currentIndex + 1) % vehicleKeys.length;
+      selectVehicle(vehicleKeys[currentIndex]);
+    }
+
+    function prevCar() {
+      currentIndex = (currentIndex - 1 + vehicleKeys.length) % vehicleKeys.length;
+      selectVehicle(vehicleKeys[currentIndex]);
+    }
+
+    document.querySelectorAll(".vehicle-types button")
+      .forEach(btn => {
+        btn.addEventListener("click", function () {
+          const type = this.dataset.vehicle;
+          selectVehicle(type, this);
+        });
+      });
+
+    const nextBtn = document.getElementById("nextCarBtn");
+    const prevBtn = document.getElementById("prevCarBtn");
+    const bookBtn = document.getElementById("bookNowBtn");
+
+    if (nextBtn) nextBtn.addEventListener("click", nextCar);
+    if (prevBtn) prevBtn.addEventListener("click", prevCar);
+    if (bookBtn) bookBtn.addEventListener("click", openModal);
+
+
+    selectVehicle(vehicleKeys[currentIndex]);
+  }
+
+  if (document.readyState !== "loading") {
+    initVehicleScripts();
+  } else {
+    document.addEventListener("DOMContentLoaded", initVehicleScripts);
+  }
+
+})();
