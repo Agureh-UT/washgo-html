@@ -981,3 +981,15 @@ if (typeof module !== 'undefined' && module.exports) {
   }
 
 })();
+
+
+if (scrollY > 80) {
+  this.nav.classList.add('is-scrolled');
+} else {
+  this.nav.classList.remove('is-scrolled');
+}
+
+
+
+
+

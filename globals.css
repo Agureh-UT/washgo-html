@@ -17,18 +17,18 @@
   --clr-accent-glow:    rgba(0, 212, 255, 0.35);
 
   /* Neutrals */
-  --clr-bg:             #05080f;
-  --clr-bg-2:           #090e1a;
-  --clr-bg-3:           #0d1525;
-  --clr-surface:        #111b2e;
-  --clr-surface-2:      #162035;
+  --clr-bg:             white;
+  --clr-bg-2:           #eaedf3;
+  --clr-bg-3:           #fbfcff;
+  --clr-surface:        #020202;
+  --clr-surface-2:      #030303;
   --clr-border:         rgba(26, 143, 227, 0.18);
   --clr-border-light:   rgba(255, 255, 255, 0.07);
 
   /* Text */
   --clr-text:           #e8f0fe;
   --clr-text-muted:     #7e9bbf;
-  --clr-text-faint:     #3d5a7a;
+  --clr-text-faint:     #050505;
   --clr-white:          #ffffff;
 
   /* Status */
@@ -575,6 +575,7 @@ p {
   height: var(--nav-height);
   display: flex;
   align-items: center;
+
   transition:
     background var(--dur-base) var(--ease-out),
     border-color var(--dur-base) var(--ease-out),
@@ -583,11 +584,11 @@ p {
 }
 
 .nav.is-scrolled {
-  background: rgba(5, 8, 15, 0.92);
+  background: rgba(243, 244, 245, 0.92);
   backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(2px);
   border-bottom-color: var(--clr-border);
-  box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 30px rgba(29, 28, 28, 0.5);
 }
 
 .nav__inner {
@@ -597,21 +598,10 @@ p {
   width: 100%;
 }
 
-.nav__logo {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  font-family: var(--font-display);
-  font-size: var(--fs-lg);
-  font-weight: var(--fw-black);
-  color: var(--clr-white);
-  text-decoration: none;
-  letter-spacing: -0.02em;
-}
-
-.nav__logo-icon {
-  width: 2.5rem;
-  height: 2.5rem;
+.nav__logo-img {
+  height: 87px;   /* adjust this */
+  width: auto;
+  object-fit: contain;
 }
 
 .nav__links {
@@ -732,21 +722,41 @@ p {
 /* Mobile Menu */
 .nav__mobile-menu {
   position: fixed;
-  inset: 0;
-  top: var(--nav-height);
-  background: rgba(5, 8, 15, 0.97);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 2, 5, 0.97);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  z-index: var(--z-overlay);
+  z-index: 1500;
   display: flex;
   flex-direction: column;
-  padding: var(--space-8);
-  gap: var(--space-4);
+  padding: var(--space-8) 5rem;  /* adds left/right padding */
+  padding-top: calc(var(--nav-height, 80px) + 2rem); /* push content below navbar */
   transform: translateX(100%);
   transition: transform var(--dur-slow) var(--ease-out);
   overflow-y: auto;
+  align-items: flex-start;  /* keeps links starting from left + respects padding */
 }
 
+.nav__mobile-menu.is-open {
+  transform: translateX(0);
+}
+.nav__toggle {
+  z-index: 2100; /* higher than mobile menu */
+  position: relative; /* or absolute inside navbar */
+  cursor: pointer;
+  font-size: 2rem;
+  color: var(--clr-text);
+}
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2000; /* above menu */
+}
 .nav__mobile-menu.is-open {
   transform: translateX(0);
 }
@@ -1773,22 +1783,41 @@ p {
   grid-template-columns:2fr 1fr;
   gap:20px;
   height:90vh;
-  margin-top:-150px;
+margin-top: var(--nav-height);
   overflow:hidden;
   position:relative;
 }
 
 .left-video{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 14/ 9;   /* keeps video natural */
+  overflow: hidden;
   clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
-  overflow:hidden;
 }
 
 .left-video video{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:0.7s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
+@media (max-width: 768px){
+
+  .left-video{
+    aspect-ratio: auto;
+    height: 700px;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+  }
+
+  .left-video video{
+    height: 100%;
+    object-fit: cover;
+  }
+
+}
+
+
 
 .left-video:hover video{
   transform:scale(1.1) rotate(1deg);
@@ -1802,7 +1831,7 @@ p {
 
 .top-video video{
   width:100%;
-  height:100%;
+  height:63%;
   object-fit:cover;
   transition:0.5s ease;
 }
@@ -1826,24 +1855,38 @@ p {
 .bottom-images img:hover{
   transform:scale(1.1);
 }
-
-.hero-content{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%, -50%);
-  text-align:center;
+.left-video {
+  position: relative; /* make this the parent positioning context */
 }
+
+.hero-content {
+  position: absolute;
+  top: 21%;            /* adjust vertically inside the video */
+  left: 10%;           /* adjust horizontally inside the video */
+  transform: none;     /* no need to translate since we're positioning inside the video */
+  text-align: left;    /* align text to the left */
+  z-index: 2;          /* ensure it appears above the video */
+}
+
+/* New style for DETAILING */
+.hero-content h1 .detailing {
+  color: #e3b41a;  /* example: bright blue, can change to any color */
+}
+
 .hero-content h1 {
   font-size: 64px;
   text-transform: uppercase;
   letter-spacing: 3px;
-   --clr-bg:             #05080f;
+  font-weight: 900;
+  color: white;
+  mix-blend-mode: difference;
 }
 
 .hero-content p {
   margin-top: 20px;
   font-size: 20px;
+  color: white;
+  mix-blend-mode: difference;
 }
 @media(max-width:900px){
 
@@ -1851,10 +1894,6 @@ p {
     flex-direction:column;
     gap:5px;
     text-align:center;
-  }
-
-  .navbar{
-    padding:20px;
   }
 
   .nav-links{
@@ -2016,18 +2055,9 @@ p {
     gap:20px;
 }
 
-.nav-buttons button{
-    padding:10px 20px;
-    border:none;
-    border-radius:25px;
-    background:#222;
-    color:#fff;
-    cursor:pointer;
-    font-weight:600;
-    transition:0.3s;
+.select{
+  color: #000;
+  margin-top: -80px;
 }
 
-.nav-buttons button:hover{
-    background:#ff2e2e;
-    transform:translateY(-3px);
-}
+
