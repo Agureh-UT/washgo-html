@@ -1047,8 +1047,8 @@ p {
 }
 /* ─── Pricing Cards / Forms ──────────────────────────────────── */
 .pricing-card {
-  background: #000000; /* solid black background */
-  border: 1px solid #333; /* subtle border for contrast */
+  background: #000000; 
+  border: 1px solid #333; 
   border-radius: var(--radius-lg);
   padding: var(--space-8);
   display: flex;
@@ -1056,7 +1056,7 @@ p {
   gap: var(--space-5);
   transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base);
   position: relative;
-  color: #ffffff; /* all text white by default */
+  color: #ffffff;
 }
 
 .pricing-card--popular {
@@ -1088,7 +1088,7 @@ p {
 .pricing-card__name {
   font-size: var(--fs-md);
   font-weight: var(--fw-bold);
-  color: #ffffff; /* service name white */
+  color: #ffffff; 
 }
 
 .pricing-card__price {
@@ -1101,25 +1101,25 @@ p {
   font-family: var(--font-display);
   font-size: 2.25rem;
   font-weight: var(--fw-black);
-  color: var(--clr-accent); /* keep price highlighted */
+  color: var(--clr-accent); 
   line-height: 1;
 }
 
 .pricing-card__currency {
   font-size: var(--fs-md);
-  color: var(--clr-text-muted); /* lighter for currency */
+  color: var(--clr-text-muted); 
   align-self: flex-start;
   margin-top: var(--space-2);
 }
 
 .pricing-card__period {
   font-size: var(--fs-sm);
-  color: #ffffff; /* make duration visible */
+  color: #ffffff; 
 }
 
 .pricing-card__divider {
   height: 1px;
-  background: #333; /* subtle divider */
+  background: #333;
   margin: var(--space-4) 0;
 }
 
@@ -1135,7 +1135,7 @@ p {
   align-items: flex-start;
   gap: var(--space-3);
   font-size: var(--fs-sm);
-  color: #ffffff; /* features text white */
+  color: #ffffff; 
 }
 
 .pricing-card__feature-icon {
@@ -1152,16 +1152,16 @@ p {
   border-collapse: separate;
   border-spacing: 0;
   font-size: var(--fs-sm);
-  background: #000000; /* black table background */
-  color: #ffffff; /* default text white */
+  background: #000000;
+  color: #ffffff; 
 }
 
 .section table thead tr {
-  background: #111111; /* slightly lighter header */
+  background: #111111;
 }
 
 .section table thead th {
-  color: #ffffff !important; /* white header text */
+  color: #ffffff !important; 
   font-weight: var(--fw-semi);
   border-bottom: 1px solid #333;
   padding: var(--space-4) var(--space-6);
@@ -1173,18 +1173,18 @@ p {
 
 .section table tbody tr td {
   padding: var(--space-4) var(--space-6);
-  color: var(--clr-accent) !important; /* force white for normal text */
+  color: var(--clr-accent) !important; 
 }
 
 .section table tbody tr td:nth-child(2),
 .section table tbody tr td:nth-child(2) {
-  color: var(--clr-accent) !important; /* highlight price column (Hatchback/Sedan) */
+  color: var(--clr-accent) !important; 
 }
 
 .section table tbody tr td:nth-child(3),
 .section table tbody tr td:nth-child(4),
 .section table tbody tr td:nth-child(5) {
-  color: #110c0c !important; /* other text white, can adjust if needed */
+  color: #110c0c !important; 
 }
 
 .section table tbody tr td a.btn {
@@ -1193,7 +1193,7 @@ p {
 }
 
 .section table tbody tr:nth-child(even) {
-  background: #111111; /* subtle alternating row color */
+  background: #111111;
 }
 
 .section table tbody tr:nth-child(odd) {
@@ -1201,7 +1201,7 @@ p {
 }
 
 .section div[style*="background:var(--clr-surface)"] {
-  background: #111 !important; /* vehicle note box black */
+  background: #111 !important; 
   border: 1px solid #333 !important;
 }
 
@@ -1298,7 +1298,7 @@ p {
 
 .section--cta-phone .cta-phone__wrapper {
   display: flex;
-  flex-direction: column; /* Mobile first */
+  flex-direction: column; 
   align-items: center;
   justify-content: center;
   gap: 40px;
@@ -1689,33 +1689,27 @@ p {
 }
 
 
-/* Make form input, textarea, and select text visible on white background */
 .booking-form .form-input,
 .booking-form .form-textarea,
 .booking-form .form-select {
-  color: #000;              /* Black text */
-  background-color: #fff;   /* White background */
-  border: 1px solid #ccc;   /* Light gray border */
+  color: #000;              
+  background-color: #fff;  
+  border: 1px solid #ccc;  
 }
 
-/* Placeholder color slightly muted */
 .booking-form .form-input::placeholder,
 .booking-form .form-textarea::placeholder,
 .booking-form .form-select option[disabled] {
-  color: #666;              /* Medium gray */
+  color: #666;            
 }
 
-/* Focus state for accessibility */
 .booking-form .form-input:focus,
 .booking-form .form-textarea:focus,
 .booking-form .form-select:focus {
-  border-color: #1a8fe3;    /* Your primary blue */
+  border-color: #1a8fe3;   
   outline: none;
-  box-shadow: 0 0 0 3px rgba(26,143,227,0.2); /* subtle glow */
+  box-shadow: 0 0 0 3px rgba(26,143,227,0.2); 
 }
-
-
-
 
 /* ─── Scroll Animations ──────────────────────────────────────── */
 .reveal {
@@ -2135,6 +2129,3 @@ p {
   margin-bottom: 20px;
 }
 
-/* ===============================
-   Values Section - Creative
-   =============================== */
