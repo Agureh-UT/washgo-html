@@ -23,7 +23,7 @@
   <div class="container">
     <nav class="nav__inner" aria-label="Main navigation">
    <a href="index.html" class="nav__logo" aria-label="Wash&Go Home">
-  <img src="public/Assets/logo2.png" alt="Wash&Go Logo" class="nav__logo-img">
+  <img src="Public/Assets/logo2.png" alt="Wash&Go Logo" class="nav__logo-img">
 </a>
 
       <ul class="nav__links" role="list">
@@ -79,14 +79,14 @@
 
   <div class="left-video">
     <video autoplay muted loop playsinline>
-      <source src="public/Assets/video_tcx1SUPi.mp4" type="video/mp4">
+      <source src="Public/Assets/Video.mp4" type="video/mp4">
     </video>
   </div>
 
   <div class="right-grid">
     <div class="top-video">
        
-      <img src="public/Assets/introducing.jpg" alt="Car 1">
+      <img src="Public/Assets/introducing.jpg" alt="Car 1">
     </div>
     </div>
    
@@ -227,31 +227,29 @@
 </section> -->
 
 
-<div class="header">
-    <h1 class="select">Select your vehicle type</h1>
-
-    <!-- Vehicle Buttons -->
-    <div class="vehicle-types">
-        <button class="active" data-vehicle="sedan">Sedan</button>
-        <button data-vehicle="suv">SUV</button>
-        <button data-vehicle="pickup">Pick Up</button>
-        <button data-vehicle="van">Mini Van</button>
-    </div>
+<section class="vehicle-selection-section">
+  <div class="vehicle-selection">
+    <h1 class="vs-heading">Select your vehicle type</h1>
+<div class="vs-vehicle-types">
+  <button data-vehicle="sedan">Sedan</button>
+  <button data-vehicle="suv">SUV</button>
+  <button data-vehicle="pickup">Pickup</button>
+  <button data-vehicle="van">Van</button>
+</div>
 
     <!-- Image Section -->
-    <div class="image-wrapper">
-        <img id="carImage" src="public/Assets/sedan.png" alt="Vehicle Image">
-  
-         <a href="booking.html" class="image-book-btn">Book Now</a>
+    <div class="vs-image-wrapper">
+        <img id="carImage" src="Public/Assets/sedan.png" alt="Vehicle Image">
+        <a href="booking.html" class="vs-image-book-btn">Book Now</a>
     </div>
 
     <!-- Navigation Buttons -->
-
-    <div class="nav-buttons">
+    <div class="vs-nav-buttons">
         <button id="prevCarBtn">⬅ Previous</button>
         <button id="nextCarBtn">Next ➡</button>
     </div>
-</div>
+  </div>
+</section>
 
 <!-- Modal -->
 <div id="packageModal" class="modal">
@@ -366,12 +364,12 @@
     </div>
   </div>
 </section>
-<section class="before-after-section">
+<section class="ba-section">
   <h2>Before & After</h2>
 
-  <div class="before-after-container">
-    <img src="public/Assets/before.png" alt="Before">
-    <img src="public/Assets/after.png" alt="After">
+  <div class="ba-container">
+    <img src="Public/Assets/before.png" alt="Before Image">
+    <img src="Public/Assets/after.png" alt="After Image">
   </div>
 </section>
 
@@ -436,7 +434,7 @@
 
       <!-- Center Image -->
       <div class="center-image">
-        <img src="public/Assets/background.png" alt="Car Image">
+        <img src="Public/Assets/background.png" alt="Car Image">
       </div>
 
       <!-- Right Features -->
@@ -512,24 +510,32 @@
   </div>
 </section>
 
-<!-- ─── Booking CTA ─── -->
-<section class="section" id="book" aria-labelledby="cta-title">
-  <div class="container container--narrow">
-    <div class="cta-banner reveal">
-      <div class="section-label" style="justify-content:center">Get Started Today</div>
-      <h2 class="cta-banner__title" id="cta-title">Ready for a Clean<br/><span class="gradient-text">That Lasts?</span></h2>
+<!-- Booking CTA with Phone Mockup -->
+<section class="section section--cta-phone">
+  <div class="container container--narrow cta-phone__wrapper">
+    
+    <!-- Text content -->
+    <div class="cta-phone__text">
+      <div class="section-label">Get Started Today</div>
+      <h2 class="cta-banner__title">Ready for a Clean<br/><span class="gradient-text">That Lasts?</span></h2>
       <p class="cta-banner__subtitle">Book your appointment in minutes. We'll handle everything else.</p>
       <div class="cta-banner__actions">
         <a href="booking.html" class="btn btn--accent btn--lg">Book Now</a>
         <a href="#" class="btn btn--whatsapp btn--lg" data-whatsapp="Hi! I'd like to book a Wash&Go service">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.09.539 4.09 1.482 5.832L0 24l6.344-1.449A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.846 0-3.594-.476-5.12-1.31l-.366-.216-3.766.861.913-3.655-.241-.378A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
           Chat on WhatsApp
         </a>
       </div>
     </div>
+
+    <!-- Phone mockup -->
+    <div class="cta-phone__mockup">
+      <img src="Public/Assets/soon.png" alt="Phone Mockup" class="phone-mockup__img">
+    </div>
+
   </div>
 </section>
-</main>
+</footer>
+
 
 <!-- ─── Footer ─── -->
 <footer class="footer" role="contentinfo">
@@ -538,7 +544,7 @@
       <div class="footer__brand">
         <a href="index.html" class="footer__logo">
           
-      <img src="public/Assets/logo2.png" alt="Wash&Go Logo" class="nav__logo-img">                                                                                                                                                                                                                                                                                  
+      <img src="Public/Assets/logo2.png" alt="Wash&Go Logo" class="nav__logo-img">                                                                                                                                                                                                                                                                                  
         </a>
         <p class="footer__tagline">Professional mobile car detailing and house cleaning services, delivered to your door.</p>
         <div class="footer__social" aria-label="Social media links">
@@ -599,17 +605,6 @@
         </div>
       </div>
     </div>
-
-    <div class="footer__bottom">
-      <p class="footer__copyright">© <span id="year"></span> Wash&Go. All rights reserved.</p>
-      <div class="footer__legal-links">
-        <a href="privacy.html" class="footer__legal-link">Privacy Policy</a>
-        <a href="terms.html" class="footer__legal-link">Terms of Service</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
 <!-- Floating WhatsApp -->
 <a href="#" class="whatsapp-float" data-whatsapp="Hi! I'd like to enquire about Wash&Go services" aria-label="Chat with us on WhatsApp">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.09.539 4.09 1.482 5.832L0 24l6.344-1.449A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.846 0-3.594-.476-5.12-1.31l-.366-.216-3.766.861.913-3.655-.241-.378A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
