@@ -765,34 +765,33 @@ p {
   z-index: 1500;
   display: flex;
   flex-direction: column;
-  padding: var(--space-8) 5rem;  /* adds left/right padding */
-  padding-top: calc(var(--nav-height, 80px) + 2rem); /* push content below navbar */
+  padding: var(--space-8) 5rem;  
+  padding-top: calc(var(--nav-height, 80px) + 2rem); 
   transform: translateX(100%);
   transition: transform var(--dur-slow) var(--ease-out);
   overflow-y: auto;
-  align-items: flex-start;  /* keeps links starting from left + respects padding */
+  align-items: flex-start;
 }
 
 .nav__mobile-menu.is-open {
   transform: translateX(0);
 }
 .nav__toggle {
-  z-index: 2100; /* higher than mobile menu */
-  position: relative; /* or absolute inside navbar */
+  z-index: 2100; 
+  position: relative; 
   cursor: pointer;
   font-size: 2rem;
   color: #1a8fe3;
 }
-/* If using span bars */
 .nav__toggle span {
-  background: #1a8fe3;  /* Makes the 3 lines blue */
+  background: #1a8fe3; 
 }
 .nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 2000; /* above menu */
+  z-index: 2000;
 }
 .nav__mobile-menu.is-open {
   transform: translateX(0);
@@ -1139,7 +1138,7 @@ p {
 }
 
 .pricing-card__feature-icon {
-  color: var(--clr-primary); /* icon accent */
+  color: var(--clr-primary); 
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -1206,7 +1205,7 @@ p {
 }
 
 .section div[style*="color:var(--clr-text-muted)"] {
-  color: #ffffff !important; /* note text white */
+  color: #ffffff !important;
 }
 
 .section p {
@@ -1332,7 +1331,7 @@ p {
 }
 
 .cta-banner__actions .btn {
-  padding: 10px 22px;   /* smaller buttons */
+  padding: 10px 22px;  
   font-size: 14px;
   border-radius: 6px;
   transition: all 0.3s ease;
@@ -1351,7 +1350,7 @@ p {
 }
 
 .phone-mockup__img {
-  max-width: 360px;   /* reduced from 450px */
+  max-width: 360px;   
   width: 100%;
   height: auto;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1384,7 +1383,6 @@ p {
     flex: 1;
   }
 }
-/* Desktop: text left, phone right */
 @media (min-width: 992px) {
   .section--cta-phone .cta-phone__wrapper {
     flex-direction: row;
@@ -1859,12 +1857,10 @@ p {
   body { background: white; color: black; }
 }
 
-/* ─── Section Intro Wrapper ──────────────────────────────────── */
 .section-intro {
   margin-bottom: var(--space-12);
 }
 
-/* ─── Content Split (2-col benefits / story layouts) ─────────── */
 .content-split {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1872,7 +1868,6 @@ p {
   align-items: center;
 }
 
-/* ─── Page Grid (form + sidebar layouts) ─────────────────────── */
 .page-grid {
   display: grid;
   gap: var(--space-12);
@@ -1882,7 +1877,6 @@ p {
 .page-grid--form    { grid-template-columns: 1.6fr 1fr; }
 .page-grid--contact { grid-template-columns: 1.5fr 1fr; }
 
-/* ─── Card Split (full-width card with 2 internal columns) ────── */
 .card-split {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2002,7 +1996,7 @@ p {
 
 
 /* ===============================
-   Stats Section - Creative
+   Stats Section - 
    =============================== */
 .wg-stats-section {
   padding: 60px 20px;
