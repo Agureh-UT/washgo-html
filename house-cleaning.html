@@ -18,10 +18,9 @@
 <header class="nav" role="banner">
   <div class="container">
     <nav class="nav__inner">
-      <a href="index.html" class="nav__logo">
-        <svg class="nav__logo-icon" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="30" fill="#0d6db5"/><path d="M14 32c0-8.8 7.2-16 16-16s16 7.2 16 16" stroke="#00d4ff" stroke-width="3" stroke-linecap="round"/><path d="M18 36c2-4 7-6 12-6s10 2 12 6" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M30 16v-5M20 20l-3-4M40 20l3-4" stroke="#4fb3f7" stroke-width="2" stroke-linecap="round"/><ellipse cx="30" cy="38" rx="10" ry="5" fill="#1a8fe3" opacity=".4"/><circle cx="30" cy="38" r="3" fill="white" opacity=".9"/></svg>
-        Wash<span style="color:var(--clr-accent)">&</span>Go
-      </a>
+   <a href="index.html" class="nav__logo" aria-label="Wash&Go Home">
+  <img src="Public/Assets/logo2.png" alt="Wash&Go Logo" class="nav__logo-img">
+</a>
       <ul class="nav__links" role="list">
         <li><a href="index.html" class="nav__link">Home</a></li>
         <li><a href="services.html" class="nav__link">Car Detailing</a></li>
@@ -58,8 +57,8 @@
       <h1 class="section-title reveal delay-100" style="text-align:center">Your Home, <span>Spotlessly Clean</span></h1>
       <p class="section-subtitle reveal delay-200" style="margin-inline:auto;text-align:center">Professional home cleaning services delivered to your door. From regular maintenance to deep cleans and move-in/out services.</p>
       <div style="display:flex;justify-content:center;gap:var(--space-4);margin-top:var(--space-8)" class="reveal delay-300">
-        <a href="booking.html?service=home-cleaning" class="btn btn--accent btn--lg">Book a Clean</a>
-        <a href="pricing.html" class="btn btn--ghost btn--lg">View Pricing</a>
+     
+
       </div>
     </div>
   </section>
@@ -124,39 +123,20 @@
           <a href="booking.html?service=move-in-out" class="btn btn--primary" style="width:100%">Book Move Clean</a>
         </article>
 
-        <article class="card reveal" style="grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1.5fr; gap: var(--space-8); align-items: center">
-          <div>
-            <div style="font-size:3.5rem;margin-bottom:var(--space-4)">🔄</div>
-            <h2 style="font-size:var(--fs-xl);font-weight:var(--fw-black);margin-bottom:var(--space-3)">Regular Maintenance Plan</h2>
-            <p style="color:var(--clr-text-muted);font-size:var(--fs-sm);line-height:var(--lh-loose)">Never think about cleaning again. Set a recurring schedule — weekly, fortnightly, or monthly — and we'll take care of the rest. Priority booking and a dedicated team for consistency.</p>
-            <div style="display:flex;gap:var(--space-3);margin-top:var(--space-6);flex-wrap:wrap">
-              <a href="booking.html?service=regular-maintenance" class="btn btn--primary">Enquire Now</a>
-              <a href="contact.html" class="btn btn--ghost">Get Custom Quote</a>
-            </div>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3)">
-            <div style="background:var(--clr-bg-3);border:1px solid var(--clr-border);border-radius:var(--radius-md);padding:var(--space-4);text-align:center">
-              <div style="font-size:1.5rem;margin-bottom:var(--space-2)">📆</div>
-              <div style="font-size:var(--fs-sm);font-weight:var(--fw-semi);color:var(--clr-white)">Weekly</div>
-              <div style="font-size:var(--fs-xs);color:var(--clr-text-muted)">Best freshness</div>
-            </div>
-            <div style="background:var(--clr-bg-3);border:1px solid var(--clr-border);border-radius:var(--radius-md);padding:var(--space-4);text-align:center">
-              <div style="font-size:1.5rem;margin-bottom:var(--space-2)">🗓️</div>
-              <div style="font-size:var(--fs-sm);font-weight:var(--fw-semi);color:var(--clr-white)">Fortnightly</div>
-              <div style="font-size:var(--fs-xs);color:var(--clr-text-muted)">Most popular</div>
-            </div>
-            <div style="background:var(--clr-bg-3);border:1px solid var(--clr-border);border-radius:var(--radius-md);padding:var(--space-4);text-align:center">
-              <div style="font-size:1.5rem;margin-bottom:var(--space-2)">📅</div>
-              <div style="font-size:var(--fs-sm);font-weight:var(--fw-semi);color:var(--clr-white)">Monthly</div>
-              <div style="font-size:var(--fs-xs);color:var(--clr-text-muted)">Deep clean level</div>
-            </div>
-            <div style="background:rgba(26,143,227,0.08);border:1px solid rgba(26,143,227,0.2);border-radius:var(--radius-md);padding:var(--space-4);text-align:center">
-              <div style="font-size:1.5rem;margin-bottom:var(--space-2)">💬</div>
-              <div style="font-size:var(--fs-sm);font-weight:var(--fw-semi);color:var(--clr-primary-light)">Custom</div>
-              <div style="font-size:var(--fs-xs);color:var(--clr-text-muted)">We'll tailor it</div>
-            </div>
-          </div>
-        </article>
+   <article style="display:grid; grid-template-columns:1fr 1fr; gap:16px; align-items:start; max-width:100%; box-sizing:border-box; background:#111; padding:16px; border-radius:12px; color:white;">
+  <!-- Left content -->
+  <div style="padding:8px; box-sizing:border-box;">
+    <div style="font-size:3.5rem; margin-bottom:12px;">🔄</div>
+    <h2 style="font-size:1.8rem; font-weight:900; margin-bottom:12px; color:white;">Regular Maintenance Plan</h2>
+    <p style="color:#eee; font-size:0.95rem; line-height:1.5; margin-bottom:16px;">Never think about cleaning again. Set a recurring schedule — weekly, fortnightly, or monthly — and we'll take care of the rest. Priority booking and a dedicated team for consistency.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:16px;">
+      <a href="booking.html?service=regular-maintenance" style="padding:10px 20px; background:#1a8fe3; color:white; text-decoration:none; border-radius:6px; font-weight:600;">Enquire Now</a>
+      <a href="contact.html" style="padding:10px 20px; background:transparent; color:#1a8fe3; border:1px solid #1a8fe3; text-decoration:none; border-radius:6px; font-weight:600;">Get Custom Quote</a>
+    </div>
+  </div>
+
+
+</article>
       </div>
     </div>
   </section>
@@ -185,10 +165,8 @@
   <section class="section--sm">
     <div class="container container--narrow">
       <div class="cta-banner reveal">
-        <h2 class="cta-banner__title">A Cleaner Home <span class="gradient-text">Starts Here</span></h2>
-        <p class="cta-banner__subtitle">Book your first clean today and experience the Wash&Go difference.</p>
-        <div class="cta-banner__actions">
-          <a href="booking.html?service=home-cleaning" class="btn btn--accent btn--lg">Book Now</a>
+       
+         
           <a href="#" class="btn btn--whatsapp btn--lg" data-whatsapp="Hi! I'd like to book a home cleaning service">Chat on WhatsApp</a>
         </div>
       </div>
